@@ -6,7 +6,7 @@
 
 ### 1. 변수 선언 및 초기화
 
-<img width="892" alt="image" src="https://gist.github.com/assets/68031450/e4fe349b-0df0-4e76-b514-4aaa6077347c">
+![image](https://github.com/jinlee1703/programmers-coding-test/assets/68031450/d0784247-9c23-4875-afa1-aac47c1b0586)
 
 - 현재 체력을 사용하기 위해 `answer`를 `health` 변수로 초기화시켜주었다.
 - `skillTime`, `secondRecovery`, `additionalRecovery` 같은 변수들은 매개 기존 1차원 배열인 `bandage`의 각 원소로 존재하고 있지만 보다 명시적으로 사용하기 위해 따로 선언을 해두었다.
@@ -15,19 +15,19 @@
 
 ### 2. while 반복문을 통한 게임 진행
 
-<img width="354" alt="image" src="https://gist.github.com/assets/68031450/07429f16-2e62-4a97-a5cb-34edc5b23dba">
+![image](https://github.com/jinlee1703/programmers-coding-test/assets/68031450/3cc0d4fd-6211-4ac5-95f2-fd649f4bd4cb)
 
 while 반복문을 통해 게임 종료 조건을 정의하였고, 매 반복마다 `second` 변수를 증가시켜 주었다.
 
 ### 3. 공격을 받았을 경우
 
-<img width="372" alt="image" src="https://gist.github.com/assets/68031450/720514f6-4412-4b39-91c5-8b1aec81332d">
+![image](https://github.com/jinlee1703/programmers-coding-test/assets/68031450/e03cd179-de87-47c0-a3fe-9973d2dbc85a)
 
 **공격 시간과 현재 게임을 진행 중인 시간이 일치하는 경우**이다. `answer(현재 체력)`은 공격 데미지 만큼 감소되고, `front`는 1 증가 시켜줌으로써 다음 공격을 가르키도록 한다. `castingTime`도 초기화된다. 만약 체력이 0 이하가 된다면 더 이상 게임 진행이 불가능하기 때문에 2번의 while 반복문에서 빠져 나오도록 하였다.
 
 ### 4. 공격을 받지 않았을 경우
 
-<img width="496" alt="image" src="https://gist.github.com/assets/68031450/7ed53964-c3f6-4a48-941b-77672be1c0c1">
+![image](https://github.com/jinlee1703/programmers-coding-test/assets/68031450/52eecbe1-0e59-4cac-a07b-b2f917d5d741)
 
 **스킬을 시전함으로써 체력을 회복**하도록 한다. 현재 체력(`answer`)에서 스킬의 초당 회복량(`secondRecovery`) 만큼 증가시켜 주고, 만약 스킬이 몬스터의 방해를 받지 않고 성공적으로 완료되었을 경우(`if (++castingTime % skillTime == 0)`), 추가적으로 회복(`additionalRecovery`)을 할 수 있도록 한다. 최대 체력 제한이 있기 때문에 3항 연산자로 최대 체력을 초과하였을 경우 현재 체력의 값을 최대 체력(`health`)로 변경해 주었다.
 
