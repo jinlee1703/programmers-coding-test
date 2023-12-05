@@ -10,3 +10,9 @@
 - `java.util.Queue` 자료구조 라이브러리를 사용하여 작업 번호를 큐에 저장하였다.
 - while 반복문으로 `day` 변수를 1씩 증가시키고, 2중 while 반복문으로 queue의 peek()를 통해 작업의 완료여부를 체크하고, 다음 peek()를 체크하는 방식으로 구현하였다.
 - 작업이 완료되면 `deployCount` 변수를 증가시키고, day 별로 `deployCount`가 1 이상이면 `java.util.ArrayList` 자료구조에 추가하고 최종적으로 이를 반환하였다.
+
+## Solution3. 올바른 괄호
+
+- 자료구조 라이브러리(`java.util.Stack`)를 사용하여 풀었으나, 효율성 검사에 통과하지 못하여 수정하였다.
+- `String.split()` 메서드를 사용하여 풀었으나 효율성 검사에 통과하지 못하여, s.toCharArray()를 사용하여 풀었다. => 이 방법으로 통과하였다.
+- 이 문제의 경우에는 괄호의 종류가 1개이기 때문에 String이나 int 변수의 stack(배열)을 사용하지 않고 boolean으로 구현하였다.
