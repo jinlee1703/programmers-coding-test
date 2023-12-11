@@ -20,3 +20,11 @@
 
 - 카펫의 가로는 최소 3부터 최대 yellow + brown으로 하여 for 반복문을 돌렸다.
 - `if ((i - 2) * (width - 2) == yellow)` : yellow의 경우 `(가로 - 2) * (세로 - 2)`이기 때문에 해당 조건문으로 가로와 세로를 판별하였다.
+
+## Solution5. 피로도
+
+- DFS를 통해 풀었다.
+- `public void dfs(int depth, int k, int[][] dungeons)`: `depth`는 던전의 방문 수, `k`는 남은 피로도를 의미하고, `dungeons`는 던전의 최소 필요 피로도와 소모 피로도이다.
+- `for (int i = 0; i < dungeons.length; i++)`: 던전의 수만큼 반복한다.
+- `if (!visited[i] && dungeons[i][0] <= k)`: 방문하지 않은 던전이고, 현재 피로도가 최소 필요도가 더 큰 경우를 체크한다.
+- `visited[i] = true; dfs(depth + 1, k - dungeons[i][1], dungeons); visited[i] = false;`: 방문 처리 - 재귀 호출 - 방문 초기화를 순서대로 수행한다.
