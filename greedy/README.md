@@ -20,3 +20,9 @@
 ## Solution4. 구명보트
 
 - [참고자료](https://easybrother0103.tistory.com/126)
+
+## Solution6. 단속카메라
+
+- 차량의 경로 배열을 종료 지점 기준으로 정렬시킨다.
+- 각 배열을 돌면서 카메라의 위치(초기값은 int의 최소값으로 설정하였음)
+- [참고자료](https://velog.io/@ahnick/programmers-%EB%8B%A8%EC%86%8D%EC%B9%B4%EB%A9%94%EB%9D%BC)
