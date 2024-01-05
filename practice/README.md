@@ -29,3 +29,7 @@
 
 - HashMap을 사용하여 풀었다.
 - [참고자료](https://hy-ung.tistory.com/104)
+
+## Solution7. 카드 뭉치
+
+- DFS를 사용하여 풀었다.
